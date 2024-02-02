@@ -14,4 +14,23 @@ def potential_divider(voltage,*res):
     volt_drops = [voltage * resistance / sum(res) for resistance in res]
     print("The voltage drops are", volt_drops)
 
-potential_divider(5,100,20,50)
+#Write a function, `temperature_check()`, that accepts a single number, a patient's body temperature, and a single character, the unit of temperature. 
+#The function should output whether the patient is hypothermic, hyperthermic or has normal body temperature based on the number passed to the function. 
+#The second value passed as argument should tell the function whether the condition should calculated in degrees celcius or degrees fahrenheit.
+#An appropriate message should be written to the screen with the result. You’re free to use what ever reasonable temperature limits you feel will 
+#adequately act as boundaries for these conditions.
+def temperature_check(temp,char:str):
+    if (char == "C" or char =="c"):
+        if temp < 35:
+            print("The patient is hypothermic.")
+        elif temp > 40:
+            print("the patient is hyperthermic.") 
+        else:
+            print("the patient has a normal body temperature.")
+    if (char == "F" or char == "f"):
+        if temp < 95:
+            print("The patient is hypothermic.")
+        elif temp > 104:
+            print("The patient is hyperthermic.")
+        else:
+            print("The patient has a normal body temperature.")
